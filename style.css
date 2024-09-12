@@ -4,7 +4,7 @@
   --text-color: #ffffff;
   --primary-color: #f5a623;
   --secondary-color: #1c1c1c;
-  --link-hover-color: #f5a623;
+  --link-hover-color: #fffefc;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   --font-family: "Poppins", sans-serif;
   --base-font-size: 16px;
@@ -82,7 +82,7 @@ header {
 }
 
 .navbar li a:hover {
-  background-color: #333333;
+  background-color: #000000;
   color: var(--link-hover-color);
 }
 
@@ -123,7 +123,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 120px 20px;
-  background-color: #121212;
+  background-color: #000000;
   min-height: 100vh;
   text-align: center;
 }
