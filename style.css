@@ -1,0 +1,195 @@
+/* General styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Header section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  background: #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.bx-menu {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.home,
+.about,
+.portfolio,
+.blog,
+.contact {
+  padding: 100px 100px;
+}
+
+/* Home section */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  padding: 50px 100px;
+}
+
+.home-text h1 {
+  font-size: 2.5rem;
+}
+
+.home-text h2 a {
+  color: #00b4d8;
+}
+
+.home-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* About section */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+}
+
+.about-text span {
+  font-size: 1.2rem;
+  color: #00b4d8;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.about-text p {
+  margin: 15px 0;
+  color: #ddd;
+}
+
+.btn {
+  background-color: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Portfolio section */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.box {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.box-img img {
+  max-width: 100%;
+}
+
+.btn-port {
+  background-color: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Blog section */
+.menu-container-blog .box {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-container-blog video {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Contact section */
+.menu-contact {
+  background-color: #1c1c1c;
+  padding: 50px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  color: #ddd;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #ddd;
+}
