@@ -1,27 +1,45 @@
-/* General styles for black theme */
+/* Define root variables for theme */
+:root {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: #f5a623;
+  --secondary-color: #1c1c1c;
+  --link-hover-color: #f5a623;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --font-family: "Poppins", sans-serif;
+  --base-font-size: 16px;
+}
+
+/* General styles */
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family);
 }
 
 body {
-  background-color: #121212; /* Dark background */
-  color: #ffffff; /* White text */
+  background-color: var(--background-color); /* Dark background */
+  color: var(--text-color); /* White text */
   line-height: 1.6;
-  font-size: 16px; /* Base font size for better scaling */
+  font-size: var(--base-font-size); /* Base font size for better scaling */
+}
+
+/* Icon styles */
+.bx-menu {
+  color: var(--secondary-color);
 }
 
 /* Links */
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #f5a623;
-  transition: color 0.3s ease;
+  color: var(--link-hover-color);
 }
 
 /* Header styles */
@@ -29,19 +47,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #1c1c1c;
+  padding: 20px 40px;
+  background-color: var(--secondary-color);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #f5a623;
+  color: var(--primary-color);
   letter-spacing: 1px;
 }
 
@@ -56,7 +74,7 @@ header {
 }
 
 .navbar li a {
-  color: #ffffff;
+  color: var(--text-color);
   font-weight: 500;
   padding: 10px 15px;
   border-radius: 5px;
@@ -65,7 +83,7 @@ header {
 
 .navbar li a:hover {
   background-color: #333333;
-  color: #f5a623;
+  color: var(--link-hover-color);
 }
 
 /* Responsive header for mobile */
@@ -73,19 +91,19 @@ header {
   #menu-icon {
     display: block;
     font-size: 2rem;
-    color: #f5a623;
+    color: var(--primary-color);
     cursor: pointer;
   }
 
   .navbar {
     display: none;
     flex-direction: column;
-    background-color: #1c1c1c;
+    background-color: var(--secondary-color);
     position: absolute;
     top: 60px;
     right: 20px;
     width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
   }
 
   .navbar li {
@@ -103,8 +121,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 100px 20px;
+  justify-content: center;
+  padding: 120px 20px;
   background-color: #121212;
   min-height: 100vh;
   text-align: center;
@@ -112,24 +130,25 @@ header {
 
 .home-text {
   max-width: 800px;
+  margin-bottom: 40px;
 }
 
 .home-text h1 {
   font-size: 3.5rem;
-  color: #ffffff;
+  color: var(--text-color);
   line-height: 1.2;
   margin-bottom: 10px;
 }
 
 .home-text h2 {
   font-size: 2.5rem;
-  color: #f5a623;
+  color: var(--primary-color);
 }
 
 .home-text .typewrite {
-  color: #ffffff;
+  color: var(--text-color);
   font-weight: 500;
-  border-bottom: 2px solid #f5a623;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .social-icons {
@@ -139,17 +158,17 @@ header {
 .social-icons a {
   font-size: 2rem;
   margin: 0 10px;
-  color: #ffffff;
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #f5a623;
+  color: var(--primary-color);
 }
 
 /* Home image */
 .home-img img {
-  max-width: 100%;
+  max-width: 40%;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
@@ -163,8 +182,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
-  background-color: #1c1c1c;
+  padding: 80px 20px;
+  background-color: var(--secondary-color);
   text-align: center;
 }
 
@@ -186,23 +205,23 @@ header {
 .about-text h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #f5a623;
+  color: var(--primary-color);
 }
 
 .about-text p {
   font-size: 1.1rem;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 /* Portfolio section */
 .menu {
-  padding: 50px 20px;
+  padding: 80px 20px;
   background-color: #121212;
 }
 
 .menu .heading h2 {
   font-size: 2.5rem;
-  color: #f5a623;
+  color: var(--primary-color);
   text-align: center;
   margin-bottom: 40px;
 }
@@ -210,15 +229,14 @@ header {
 .menu-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  justify-content: center;
+  gap: 30px;
 }
 
 .box {
-  background-color: #1c1c1c;
+  background-color: var(--secondary-color);
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -232,10 +250,9 @@ header {
   border-radius: 10px;
 }
 
-/* Portfolio button */
 .btn-port {
-  background-color: #f5a623;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   padding: 10px 15px;
   border-radius: 5px;
   display: inline-block;
@@ -245,26 +262,19 @@ header {
 }
 
 .btn-port:hover {
-  background-color: #ffffff;
-  color: #1c1c1c;
-}
-
-/* Blog section */
-.menu-container-blog {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  background-color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 /* Contact section */
 .menu-contact {
-  background-color: #1c1c1c;
-  padding: 50px 20px;
+  background-color: var(--secondary-color);
+  padding: 80px 20px;
 }
 
 .box-contact h2 {
   font-size: 2.5rem;
-  color: #f5a623;
+  color: var(--primary-color);
 }
 
 .box-contact form {
@@ -280,7 +290,7 @@ header {
 .form-group label {
   font-size: 1rem;
   margin-bottom: 5px;
-  color: #f5a623;
+  color: var(--primary-color);
 }
 
 .form-group input,
@@ -289,13 +299,13 @@ header {
   border: none;
   border-radius: 5px;
   background-color: #333333;
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 1rem;
 }
 
 button[type="submit"] {
-  background-color: #f5a623;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -304,8 +314,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #ffffff;
-  color: #1c1c1c;
+  background-color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 /* Footer */
@@ -313,7 +323,7 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: #121212;
-  color: #f5a623;
+  color: var(--primary-color);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
