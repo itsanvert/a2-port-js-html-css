@@ -217,6 +217,7 @@ header {
 .menu {
   padding: 80px 20px;
   background-color: #121212;
+  text-align: center;
 }
 
 .menu .heading h2 {
